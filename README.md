@@ -3,8 +3,8 @@
 [![Python Version](https://img.shields.io/badge/Python-3.11%2B-blue?style=flat-square)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104%2B-009688?style=flat-square)](https://fastapi.tiangolo.com/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Latest-336791?style=flat-square)](https://www.postgresql.org/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-[![Code Quality](https://img.shields.io/badge/Code%20Quality-Production--Grade-brightgreen?style=flat-square)]()
+
+
 
 > **Enterprise-Grade SaaS Backend** | Multi-Tenant Architecture | Production Ready  
 > Built with **FastAPI** + **PostgreSQL** + **SQLAlchemy 2.0** + **JWT Security**
