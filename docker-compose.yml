@@ -1,0 +1,29 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: operant
+      POSTGRES_USER: operant
+      POSTGRES_PASSWORD: operant
+    ports:
+      - "5432:5432"
+    volumes:
+      - operant_pgdata:/var/lib/postgresql/data
+
+  api:
+    build: .
+    environment:
+      OPERANT_ENV: local
+      OPERANT_DATABASE_URL: postgresql+psycopg2://operant:operant@db:5432/operant
+      OPERANT_JWT_SECRET: "change-me-in-prod"
+      OPERANT_JWT_ACCESS_TTL_SECONDS: "900"
+      OPERANT_JWT_REFRESH_TTL_SECONDS: "2592000"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+volumes:
+  operant_pgdata:
+
+
